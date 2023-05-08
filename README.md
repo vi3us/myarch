@@ -1,10 +1,13 @@
+
+# My Arch
+
 ---
 
 sudo pacman -S github-cli
 
 gh auth login
 
-git clone [https://github.com/vi3us/webapp.git](https://github.com/vi3us/webapp.git)
+git clone [https://github.com/vi3us/webapp.git](https://github.com/vi3us/myarch.git)
 
 ---
 
