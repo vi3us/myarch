@@ -39,7 +39,7 @@ sudo pacman -S reflector
 
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 
-sudo reflector —verdose —lastest 10 —protocol https —sort —save /etc/pcaman.d/mirrorlist
+sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 sudo pacman -Sy
 
