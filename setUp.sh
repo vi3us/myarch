@@ -47,6 +47,10 @@ if [ "$VAR = "y"" ] || [ "$VAR = """ ]; then
         curl -o ~/.config/kitty/nord.conf https://raw.githubusercontent.com/connorholyday/nord-kitty/mas
         cd ~/.config/kitty/
         printf "include ./nord.conf" >> kitty.conf
+        curl -sS https://starship.rs/install.sh | sh
+        cd ~
+        printf 'eval " $(starship init bash)" ' >> ~/.bashrc
+
 fi
 
 # AutoCPU-freq
