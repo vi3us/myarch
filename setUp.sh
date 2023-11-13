@@ -33,10 +33,19 @@ yay -Sy timeshift brave-bin
 
 # nvidia
 echo "==========================================================================="
-echo -n "install nvidia?: "
+echo -n "install nvidia?(Y/n): "
 read VAR
-if [ $VAR = "y" ]
-then
+if [ "$VAR = "y"" ] || [ "$VAR = """ ]; then
         sudo pacman -S --needed nvidia nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader
+fi
+
+# Kitty
+echo "==========================================================================="
+echo -n "kitty theme (Y/n): "
+read VAR
+if [ "$VAR = "y"" ] || [ "$VAR = """ ]; then
+        curl -o ~/.config/kitty/nord.conf https://raw.githubusercontent.com/connorholyday/nord-kitty/mas
+        cd ~/.config/kitty/
+        printf "include ./nord.conf" >> kitty.conf
 fi
 
