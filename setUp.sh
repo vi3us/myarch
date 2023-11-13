@@ -1,6 +1,6 @@
 #! /bin/bash
 #
-#Udate
+#Update
 sudo pacman -Syyu
 
 # YAY
@@ -22,7 +22,7 @@ sudo systemctl enable bluetooth && sudo systemctl start bluetooth
 
 # Install basic utilities
 
-sudo pacman -S p7zip unrar tar rsync git neofetch htop exfat-utils fuse-exfat ntfs-3g flac jasper aria2 jdk-openjdk flatpak libreoffice-fresh vlc gimp 
+sudo pacman -S kitty p7zip unrar tar rsync git neofetch htop exfat-utils fuse-exfat ntfs-3g flac jasper aria2 jdk-openjdk flatpak libreoffice-fresh vlc gimp gparted 
 
 # Preload
 yay -S preload
