@@ -31,3 +31,12 @@ sudo systemctl enable preload && sudo systemctl start preload
 # timeshift and brave
 yay -Sy timeshift brave-bin
 
+# nvidia
+echo "==========================================================================="
+echo -n "install nvidia?: "
+read VAR
+if [ $VAR = "y" ]
+then
+        sudo pacman -S --needed nvidia nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader
+fi
+
