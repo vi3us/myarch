@@ -49,3 +49,15 @@ if [ "$VAR = "y"" ] || [ "$VAR = """ ]; then
         printf "include ./nord.conf" >> kitty.conf
 fi
 
+# AutoCPU-freq
+echo "==========================================================================="
+echo -n "AutoCPUfreq? (Y/n): "
+read VAR
+if [ "$VAR = "y"" ] || [ "$VAR = """ ]; then
+	cd ~/Downloads
+	git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+	cd auto-cpufreq && sudo ./auto-cpufreq-installer
+	sudo auto-cpufreq --install
+	systemctl enable auto-cpufreq
+	systemctl start auto-cpufreq
+fi
