@@ -28,6 +28,6 @@ sudo pacman -S kitty p7zip unrar tar rsync git neofetch htop exfat-utils fuse-ex
 yay -S preload
 sudo systemctl enable preload && sudo systemctl start preload
 
-# timeshift
-yay -Sy timeshift
+# timeshift and brave
+yay -Sy timeshift brave-bin
 
